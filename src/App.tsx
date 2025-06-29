@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import React from 'react';
 import { graphqlOperation } from '@aws-amplify/api-graphql';
 import { withAuthenticator, WithAuthenticatorProps } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
@@ -29,7 +30,7 @@ type CreateTodoInput = {
 
 const client = generateClient();
 
-function App({ signOut, user }: WithAuthenticatorProps) {
+const App: React.FC<WithAuthenticatorProps> = ({ signOut, user }) => {
   const [formData, setFormData] = useState<CreateTodoInput>({ name: '', description: '' });
   const [todos, setTodos] = useState<Todo[]>([]);
 
@@ -61,13 +62,13 @@ function App({ signOut, user }: WithAuthenticatorProps) {
           <TextField
             label="Name"
             value={formData.name}
-            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+            onChange={(e: { target: { value: any; }; }) => setFormData({ ...formData, name: e.target.value })}
             fullWidth
           />
           <TextField
             label="Description"
             value={formData.description}
-            onChange={(e) => setFormData({ ...formData, description: e.target.value })}
+            onChange={(e: { target: { value: any; }; }) => setFormData({ ...formData, description: e.target.value })}
             fullWidth
           />
           <Button variant="contained" color="primary" onClick={handleAddTodo}>

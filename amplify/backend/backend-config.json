@@ -7,7 +7,7 @@
             "UserPoolId"
           ],
           "category": "auth",
-          "resourceName": "amplifytodo02475b05"
+          "resourceName": "amplifytodoa48a069a"
         }
       ],
       "output": {
@@ -16,7 +16,7 @@
           "defaultAuthentication": {
             "authenticationType": "AMAZON_COGNITO_USER_POOLS",
             "userPoolConfig": {
-              "userPoolId": "authamplifytodo02475b05"
+              "userPoolId": "authamplifytodoa48a069a"
             }
           }
         }
@@ -26,7 +26,7 @@
     }
   },
   "auth": {
-    "amplifytodo02475b05": {
+    "amplifytodoa48a069a": {
       "customAuth": false,
       "dependsOn": [],
       "frontendAuthConfig": {
