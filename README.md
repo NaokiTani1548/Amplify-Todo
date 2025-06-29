@@ -143,3 +143,15 @@ amplify delete
 ```
 
 ---
+
+## GraphQL スキーマ
+
+```bash
+type Todo @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  name: String!
+  description: String
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+```
